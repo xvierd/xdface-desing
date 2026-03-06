@@ -26,5 +26,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Clear stale auth from npmrc
+        run: npm config delete //registry.npmjs.org/:_authToken || true
+
       - name: Publish
         run: npm publish --access public --provenance
