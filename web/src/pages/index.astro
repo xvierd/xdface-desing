@@ -12,6 +12,53 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
   <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
   <link rel="stylesheet" href="/styles/global.css" />
+  <style>
+    .xd-code-block {
+      position: relative;
+      background: var(--xd-surface-2);
+      border: 1px solid var(--xd-border);
+      border-radius: var(--xd-radius-md);
+      padding: 16px;
+      font-family: var(--xd-font-mono);
+      font-size: 13px;
+      color: var(--xd-text-muted);
+      line-height: 1.7;
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+    .xd-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .xd-code-block .xd-code-copy {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .xd-code-block:hover .xd-code-copy {
+      opacity: 1;
+    }
+    .xd-code-block .xd-code-copy.copied {
+      opacity: 1;
+      color: #4ade80;
+    }
+    .xd-code-section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--xd-text-muted);
+      margin-bottom: 8px;
+      margin-top: 24px;
+    }
+    .xd-code-block .kw  { color: #c792ea; }
+    .xd-code-block .str { color: #c3e88d; }
+    .xd-code-block .cm  { color: #546e7a; font-style: italic; }
+    .xd-code-block .attr { color: #82aaff; }
+    .xd-code-block .val  { color: #f78c6c; }
+  </style>
 </head>
 <body>
 
@@ -391,6 +438,27 @@
     </div>
   </div>
 
+  <!-- Buttons: code example -->
+  <div class="card" style="padding:32px; margin-bottom:24px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:4px;">Usage</p>
+    <p style="font-size:13px; color:var(--xd-text-muted); margin-bottom:0;">Copy these class names directly into your HTML or JSX.</p>
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-action"</span>&gt;Primary&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-ghost"</span>&gt;Ghost&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-subtle"</span>&gt;Subtle&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-danger"</span>&gt;Danger&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-action xd-btn-sm"</span>&gt;Small&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-action xd-btn-lg"</span>&gt;Large&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-loading"</span>&gt;Loading...&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-icon"</span>&gt;&#x2715;&lt;/button&gt;
+&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-action xd-btn-full"</span>&gt;Full Width&lt;/button&gt;</code>
+    </div>
+  </div>
+
   <!-- Badges -->
   <div class="card" style="padding:32px; margin-bottom:24px;">
     <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:20px;">Badges</p>
@@ -412,6 +480,28 @@
         Nivel 4
       </span>
       <span class="xd-badge" style="background:rgba(96,165,250,0.12); color:#60A5FA; border:1px solid rgba(96,165,250,0.2);">Beta</span>
+    </div>
+
+    <!-- Badges: code example -->
+    <div class="xd-code-block" style="margin:20px 0 0;">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code><span class="cm">&lt;!-- base badge — add inline styles for color variants --&gt;</span>
+&lt;<span class="attr">span</span> <span class="attr">class</span>=<span class="str">"xd-badge"</span>&gt;Badge&lt;/span&gt;
+
+<span class="cm">&lt;!-- success variant --&gt;</span>
+&lt;<span class="attr">span</span> <span class="attr">class</span>=<span class="str">"xd-badge"</span>
+      <span class="attr">style</span>=<span class="str">"background:rgba(22,163,74,0.12);color:#4ade80;border:1px solid rgba(22,163,74,0.25)"</span>&gt;
+  Activo
+&lt;/span&gt;
+
+<span class="cm">&lt;!-- XP / warning variant --&gt;</span>
+&lt;<span class="attr">span</span> <span class="attr">class</span>=<span class="str">"xd-badge"</span>
+      <span class="attr">style</span>=<span class="str">"background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25)"</span>&gt;
+  1,240 XP
+&lt;/span&gt;</code>
     </div>
   </div>
 
@@ -648,6 +738,42 @@
         <button class="xd-btn-action xd-btn-full">Create account</button>
         <button class="xd-btn-ghost" style="flex-shrink:0;">Cancel</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Forms: code example -->
+  <div class="card" style="padding:32px; margin-top:16px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:4px;">Usage</p>
+    <p style="font-size:13px; color:var(--xd-text-muted); margin-bottom:0;">All form classes are theme-aware — they respond to the <code style="font-family:var(--xd-font-mono); font-size:12px; background:var(--xd-surface-2); padding:2px 6px; border-radius:5px;">data-theme</code> attribute automatically.</p>
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code><span class="cm">&lt;!-- Label --&gt;</span>
+&lt;<span class="attr">label</span> <span class="attr">class</span>=<span class="str">"xd-label"</span>&gt;Label&lt;/label&gt;
+
+<span class="cm">&lt;!-- Text input --&gt;</span>
+&lt;<span class="attr">input</span> <span class="attr">class</span>=<span class="str">"xd-input"</span> <span class="attr">placeholder</span>=<span class="str">"Text input"</span> /&gt;
+
+<span class="cm">&lt;!-- Error state --&gt;</span>
+&lt;<span class="attr">input</span> <span class="attr">class</span>=<span class="str">"xd-input xd-input-error"</span> /&gt;
+&lt;<span class="attr">span</span> <span class="attr">class</span>=<span class="str">"xd-error-text"</span>&gt;Error message&lt;/span&gt;
+
+<span class="cm">&lt;!-- Helper text --&gt;</span>
+&lt;<span class="attr">span</span> <span class="attr">class</span>=<span class="str">"xd-helper"</span>&gt;Helper text&lt;/span&gt;
+
+<span class="cm">&lt;!-- Select --&gt;</span>
+&lt;<span class="attr">select</span> <span class="attr">class</span>=<span class="str">"xd-select"</span>&gt;...&lt;/select&gt;
+
+<span class="cm">&lt;!-- Textarea --&gt;</span>
+&lt;<span class="attr">textarea</span> <span class="attr">class</span>=<span class="str">"xd-textarea"</span>&gt;&lt;/textarea&gt;
+
+<span class="cm">&lt;!-- Checkbox --&gt;</span>
+&lt;<span class="attr">input</span> <span class="attr">type</span>=<span class="str">"checkbox"</span> <span class="attr">class</span>=<span class="str">"xd-checkbox"</span> /&gt;
+
+<span class="cm">&lt;!-- Toggle --&gt;</span>
+&lt;<span class="attr">input</span> <span class="attr">type</span>=<span class="str">"checkbox"</span> <span class="attr">class</span>=<span class="str">"xd-toggle"</span> /&gt;</code>
     </div>
   </div>
 </section>
@@ -933,6 +1059,33 @@
   <h2 class="section-title">Import tokens</h2>
   <p class="section-desc">One file. Three ways to consume it.</p>
 
+  <!-- Install snippet -->
+  <div class="card" style="padding:32px; margin-bottom:24px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:16px;">Install</p>
+    <div class="xd-code-block" style="margin-top:0;">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>npm install @xdface/tokens</code>
+    </div>
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-top:24px; margin-bottom:16px;">Import</p>
+    <div class="xd-code-block" style="margin-top:0;">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code><span class="cm">// TypeScript</span>
+<span class="kw">import</span> &#123; tokens &#125; <span class="kw">from</span> <span class="str">'@xdface/tokens'</span>
+
+<span class="cm">// CSS custom properties</span>
+<span class="kw">import</span> <span class="str">'@xdface/tokens/css'</span>
+
+<span class="cm">// Tailwind preset</span>
+<span class="kw">const</span> preset = <span class="kw">require</span>(<span class="str">'@xdface/tokens/tailwind'</span>)</code>
+    </div>
+  </div>
+
   <div class="grid-3" style="gap:16px;">
     <div class="card" style="overflow:hidden;">
       <div style="padding:14px 18px; background:var(--xd-surface-2); border-bottom:1px solid var(--xd-border);">
@@ -994,6 +1147,24 @@ module.exports = &#123;
   </p>
 </footer>
 
+
+<!-- ── Copy-to-clipboard for code blocks ── -->
+<script>
+  function copyCode(btn) {
+    const block = btn.closest('.xd-code-block');
+    const code = block.querySelector('code');
+    const text = code.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy';
+      }, 1800);
+    });
+  }
+  window.copyCode = copyCode;
+</script>
 
 <!-- ── Theme toggle script ── -->
 <script>
