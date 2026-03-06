@@ -12,6 +12,7 @@ dev:
 	cd web && npm run dev
 
 build:
+	cp web/src/styles/global.css web/public/styles/global.css
 	cd web && npm run build
 
 deploy: build
