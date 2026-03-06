@@ -1,22 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
+    <linearGradient id="xd-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
     <linearGradient id="xd-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#16A34A"/>
       <stop offset="100%" stop-color="#EA580C"/>
     </linearGradient>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .border { stroke: #E5E7EB; }
+      .eye-left { stroke: #16A34A; }
+      .eye-right { stroke: #EA580C; }
+      .grin { stroke: url(#xd-gradient); }
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #13131A; }
+        .border { stroke: rgba(255,255,255,0.1); }
+        .eye-left { stroke: #4ADE80; }
+        .eye-right { stroke: #FB923C; }
+        .grin { stroke: url(#xd-gradient-dark); }
+      }
+    </style>
   </defs>
-  <!-- Dark background -->
-  <rect width="128" height="128" rx="28" fill="#13131A"/>
-  <rect width="126" height="126" x="1" y="1" rx="27" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-  <!-- Face — tilted 3deg for attitude -->
+  <rect class="bg" width="128" height="128" rx="28"/>
+  <rect class="border" width="126" height="126" x="1" y="1" rx="27" fill="none" stroke-width="2"/>
   <g transform="rotate(-3 64 64)">
-    <!-- Left X eye — bright green -->
-    <line x1="28" y1="30" x2="50" y2="52" stroke="#4ADE80" stroke-width="10" stroke-linecap="round"/>
-    <line x1="50" y1="30" x2="28" y2="52" stroke="#4ADE80" stroke-width="10" stroke-linecap="round"/>
-    <!-- Right X eye — bright orange -->
-    <line x1="78" y1="30" x2="100" y2="52" stroke="#FB923C" stroke-width="10" stroke-linecap="round"/>
-    <line x1="100" y1="30" x2="78" y2="52" stroke="#FB923C" stroke-width="10" stroke-linecap="round"/>
-    <!-- Grin — asymmetric -->
-    <path d="M 22 72 C 36 102 92 108 108 72" stroke="url(#xd-gradient-dark)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <line class="eye-left" x1="28" y1="30" x2="50" y2="52" stroke-width="10" stroke-linecap="round"/>
+    <line class="eye-left" x1="50" y1="30" x2="28" y2="52" stroke-width="10" stroke-linecap="round"/>
+    <line class="eye-right" x1="78" y1="30" x2="100" y2="52" stroke-width="10" stroke-linecap="round"/>
+    <line class="eye-right" x1="100" y1="30" x2="78" y2="52" stroke-width="10" stroke-linecap="round"/>
+    <path class="grin" d="M 22 72 C 36 102 92 108 108 72" stroke-width="8" stroke-linecap="round" fill="none"/>
   </g>
 </svg>

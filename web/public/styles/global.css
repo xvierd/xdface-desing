@@ -810,3 +810,25 @@ body { min-height: 100vh; }
 .fab-ring {
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+/* ── Alerts ── */
+.xd-alert { display: flex; gap: 0.75rem; padding: 0.875rem 1rem; border-radius: var(--xd-radius-md); border: 1.5px solid; font-size: 0.875rem; }
+.xd-alert-success { background: color-mix(in srgb, var(--xd-success) 8%, transparent); border-color: color-mix(in srgb, var(--xd-success) 30%, transparent); color: var(--xd-success); }
+.xd-alert-warning { background: color-mix(in srgb, var(--xd-warning) 8%, transparent); border-color: color-mix(in srgb, var(--xd-warning) 30%, transparent); color: color-mix(in srgb, var(--xd-warning) 80%, #000); }
+.xd-alert-error { background: color-mix(in srgb, var(--xd-error) 8%, transparent); border-color: color-mix(in srgb, var(--xd-error) 30%, transparent); color: var(--xd-error); }
+.xd-alert-info { background: color-mix(in srgb, var(--xd-info) 8%, transparent); border-color: color-mix(in srgb, var(--xd-info) 30%, transparent); color: var(--xd-info); }
+
+/* ── Progress bar ── */
+.xd-progress { width: 100%; height: 6px; background: color-mix(in srgb, var(--xd-action) 15%, transparent); border-radius: var(--xd-radius-full); overflow: hidden; }
+.xd-progress-bar { height: 100%; background: var(--xd-gradient-action); border-radius: var(--xd-radius-full); transition: width 0.3s ease; }
+
+/* ── Tabs ── */
+.xd-tab-list { display: flex; gap: 0.25rem; border-bottom: 1.5px solid var(--xd-border); padding-bottom: 0; }
+.xd-tab { padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; color: var(--xd-text-muted); border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1.5px; transition: color 0.15s ease, border-color 0.15s ease; }
+.xd-tab:hover { color: var(--xd-text); }
+.xd-tab-active { color: var(--xd-action) !important; border-bottom-color: var(--xd-action) !important; }
+
+/* ── Tooltip ── */
+[data-tooltip] { position: relative; }
+[data-tooltip]::before { content: attr(data-tooltip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--xd-text); color: var(--xd-bg); padding: 0.3rem 0.625rem; border-radius: var(--xd-radius-sm); font-size: 0.7rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.15s ease; z-index: 100; }
+[data-tooltip]:hover::before { opacity: 1; }

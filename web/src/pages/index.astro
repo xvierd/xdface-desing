@@ -84,6 +84,7 @@
       <a href="#type"       class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Type</a>
       <a href="#components" class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Components</a>
       <a href="#forms"      class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Forms</a>
+      <a href="#feedback"   class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Feedback</a>
       <a href="#tokens"     class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Tokens</a>
       <a href="#logos"      class="nav-link nav-hide-sm" style="font-size:13px; color:var(--xd-text-muted); text-decoration:none; padding:6px 10px; border-radius:8px; white-space:nowrap;">Logos</a>
 
@@ -779,6 +780,162 @@
 
 <span class="cm">&lt;!-- Toggle --&gt;</span>
 &lt;<span class="attr">input</span> <span class="attr">type</span>=<span class="str">"checkbox"</span> <span class="attr">class</span>=<span class="str">"xd-toggle"</span> /&gt;</code>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FEEDBACK: Alerts, Badges, Progress, Tabs, Tooltip
+══════════════════════════════════════════ -->
+<div id="feedback" class="divider"></div>
+<section class="section">
+  <p class="section-label">Feedback</p>
+  <h2 class="section-title">Alerts, progress & more</h2>
+  <p class="section-desc">System feedback components — alerts for status messages, progress bars, tabs, and tooltips.</p>
+
+  <!-- Alerts -->
+  <div class="card" style="padding:32px; margin-bottom:16px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:20px;">Alerts</p>
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:16px;">
+      <div class="xd-alert xd-alert-success">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0; margin-top:1px;"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Nota guardada correctamente.</span>
+      </div>
+      <div class="xd-alert xd-alert-warning">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0; margin-top:1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Tu racha se perdera si no completas una leccion hoy.</span>
+      </div>
+      <div class="xd-alert xd-alert-error">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0; margin-top:1px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        <span>Error al guardar. Intenta de nuevo.</span>
+      </div>
+      <div class="xd-alert xd-alert-info">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0; margin-top:1px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>Hay una nueva version disponible del curso.</span>
+      </div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span class="token-pill">.xd-alert</span>
+      <span class="token-pill">.xd-alert-success</span>
+      <span class="token-pill">.xd-alert-warning</span>
+      <span class="token-pill">.xd-alert-error</span>
+      <span class="token-pill">.xd-alert-info</span>
+    </div>
+
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-alert xd-alert-success"</span>&gt;Success message&lt;/div&gt;
+&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-alert xd-alert-warning"</span>&gt;Warning message&lt;/div&gt;
+&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-alert xd-alert-error"</span>&gt;Error message&lt;/div&gt;
+&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-alert xd-alert-info"</span>&gt;Info message&lt;/div&gt;</code>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="card" style="padding:32px; margin-bottom:16px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:20px;">Progress bar</p>
+    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:16px;">
+      <div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="font-size:12px; color:var(--xd-text-muted);">Leccion 1 de 4</span>
+          <span style="font-size:12px; font-weight:600; color:var(--xd-text);">25%</span>
+        </div>
+        <div class="xd-progress"><div class="xd-progress-bar" style="width:25%;"></div></div>
+      </div>
+      <div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="font-size:12px; color:var(--xd-text-muted);">Leccion 2 de 4</span>
+          <span style="font-size:12px; font-weight:600; color:var(--xd-text);">50%</span>
+        </div>
+        <div class="xd-progress"><div class="xd-progress-bar" style="width:50%;"></div></div>
+      </div>
+      <div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="font-size:12px; color:var(--xd-text-muted);">Leccion 3 de 4</span>
+          <span style="font-size:12px; font-weight:600; color:var(--xd-text);">75%</span>
+        </div>
+        <div class="xd-progress"><div class="xd-progress-bar" style="width:75%;"></div></div>
+      </div>
+      <div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+          <span style="font-size:12px; color:var(--xd-text-muted);">Curso completado</span>
+          <span style="font-size:12px; font-weight:600; color:var(--xd-action);">100%</span>
+        </div>
+        <div class="xd-progress"><div class="xd-progress-bar" style="width:100%;"></div></div>
+      </div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span class="token-pill">.xd-progress</span>
+      <span class="token-pill">.xd-progress-bar</span>
+    </div>
+
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-progress"</span>&gt;
+  &lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-progress-bar"</span> <span class="attr">style</span>=<span class="str">"width:75%"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="card" style="padding:32px; margin-bottom:16px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:20px;">Tabs</p>
+    <div class="xd-tab-list" style="margin-bottom:16px;">
+      <button class="xd-tab xd-tab-active">Notas</button>
+      <button class="xd-tab">Cursos</button>
+      <button class="xd-tab">Progreso</button>
+    </div>
+    <div style="padding:16px 0;">
+      <p style="font-size:14px; color:var(--xd-text-muted);">Contenido de la pestana activa.</p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
+      <span class="token-pill">.xd-tab-list</span>
+      <span class="token-pill">.xd-tab</span>
+      <span class="token-pill">.xd-tab-active</span>
+    </div>
+
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>&lt;<span class="attr">div</span> <span class="attr">class</span>=<span class="str">"xd-tab-list"</span>&gt;
+  &lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-tab xd-tab-active"</span>&gt;Active&lt;/button&gt;
+  &lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-tab"</span>&gt;Tab 2&lt;/button&gt;
+  &lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-tab"</span>&gt;Tab 3&lt;/button&gt;
+&lt;/div&gt;</code>
+    </div>
+  </div>
+
+  <!-- Tooltip -->
+  <div class="card" style="padding:32px;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--xd-text-muted); margin-bottom:20px;">Tooltip</p>
+    <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-bottom:16px; padding-top:24px;">
+      <button class="xd-btn-action" data-tooltip="Crear nueva nota">Hover me</button>
+      <button class="xd-btn-ghost" data-tooltip="Cancelar accion">Ghost tooltip</button>
+      <button class="xd-btn-icon" data-tooltip="Configuracion">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <span class="token-pill">[data-tooltip]</span>
+    </div>
+
+    <div class="xd-code-block">
+      <button class="xd-btn-ghost xd-btn-sm xd-code-copy" onclick="copyCode(this)" title="Copy code">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <code>&lt;<span class="attr">button</span> <span class="attr">class</span>=<span class="str">"xd-btn-action"</span> <span class="attr">data-tooltip</span>=<span class="str">"Tooltip text"</span>&gt;
+  Hover me
+&lt;/button&gt;</code>
     </div>
   </div>
 </section>
